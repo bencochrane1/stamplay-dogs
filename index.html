@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Doggy Delight</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="landing" ng-app="doggydelight">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="index.html">Doggy Delight</a></h1>
+				<a href="#nav">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="nav" ng-controller="homeCtrl as home">
+				<ul class="links">
+					<li><a ui-sref="home">Home</a></li>
+					<li><a ui-sref="profile">Profile</a></li>
+					<li><a ui-sref="subscriptions">New Subscription</a></li>
+					<li><a ng-show="home.isLogged" href ng-click="home.logout()">Generic</a></li>
+				</ul>
+			</nav>
+
+			<div ui-view></div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook">
+							<span class="label">Facebook</span>
+						</a></li>
+						<li><a href="#" class="icon fa-twitter">
+							<span class="label">Twitter</span>
+						</a></li>
+						<li><a href="#" class="icon fa-instagram">
+							<span class="label">Instagram</span>
+						</a></li>
+						<li><a href="#" class="icon fa-linkedin">
+							<span class="label">LinkedIn</span>
+						</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled.</li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a>.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
+					</ul>
+				</div>
+			</footer>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+	    <script src="assets/js/util.js"></script>
+	    <script src="assets/js/main.js"></script>
+
+      <script src="/bower_components/stamplay-js-sdk/dist/stamplay.min.js"></script>
+			<script type="text/javascript">
+            Stamplay.init('doggydelight');
+      </script>
+      <script src="/bower_components/angular/angular.min.js"></script>
+      <script src="/bower_components/angular-route/angular-route.min.js"></script>
+      <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="/bower_components/angular-stamplay/angular-stamplay.js"></script>
+
+			<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+		       <script type="text/javascript">
+		           Stripe.setPublishableKey('pk_test_cowjCMlJWkHRyViJZgq0umM5');
+		       </script>
+
+			<script src="/assets/js/services/main.js"></script>
+			<script src="/assets/js/services/userService.js"></script>
+			<script src="/assets/js/modules/app.js"></script>
+
+			<script src="/assets/js/controllers/homeCtrl.js"></script>
+			<script src="/assets/js/controllers/subscriptionCtrl.js"></script>
+			<script src="/assets/js/controllers/profileCtrl.js"></script>
+
+	</body>
+</html>

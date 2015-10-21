@@ -1,0 +1,23 @@
+<section id="banner">
+    <i class="icon fa-glass"></i>
+    <h3 ng-show="home.isLogged">Welcome {{ home.user.instance.displayName }}</h3>
+    <h2>The best cocktails you've ever made</h2>
+    <p>Premium ingredients and recipes, delivered to your door each month.</p>
+    <ul class="actions">
+        <li><a class="button big special"
+        ng-show="!home.isLogged"
+        ng-click="home.signUp()">
+        Become a member
+        </a></li>
+        <li><a class="button big special"
+        ng-show="home.isLogged"
+        ui-sref="subscriptions">
+        New subscription
+        </a></li><br>
+        <li><a class="button big special"
+        ng-show="home.isLogged"
+        ui-sref="profile">
+        View your subscriptions
+        </a></li>
+    </ul>
+</section>

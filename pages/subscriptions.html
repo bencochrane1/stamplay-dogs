@@ -1,0 +1,93 @@
+<!-- articles section starts -->
+<section id="three" class="wrapper style3 special">
+  <div class="inner">
+    <header class="major narrow    ">
+    <h2>Join your spirit way</h2>
+    </header>
+      <article class="feature left">
+      <span class="image"><img src="images/gin.jpg" alt=""/></span>
+        <div class="content">
+        <h3>God save the queen</h3>
+        <p>Discover a new gin cocktail each month.</p>
+        <ul class="actions">
+          <li ng-show="sub.isLogged"><a href class="button special" ng-click="sub.openSubscribe('tplanOne')">Subscribe</a>
+          </li>
+        </ul>
+           </div>
+         </article>
+      <article class="feature right">
+          <!-- second article here -->
+      </article>
+</section>
+
+<section id="payment-form" class="wrapper style2 special" ng-show="sub.showPayment">
+  <div class="inner">
+  <header class="major narrow">
+    <h2>Payment information</h2>
+  </header>
+  <form>
+    <div class="container 50%">
+    <div class="row uniform 50%">
+    <div class="12u$">
+        <h3>Personal data</h3>
+</div>
+    <div class="6u 12u$(xsmall)">
+      <input name="firstname" placeholder="First name" type="text" value="{{sub.user.get('name').givenName}}"/>
+    </div>
+    <div class="6u$ 12u$(xsmall)">
+      <input name="familyname" placeholder="Family Name" type="text" value="{{sub.user.get('name').familyName}}"/>
+    </div>
+    <div class="12u$">
+     <input name="email" placeholder="Email" type="text" value="{{sub.user.get('email')}}"/>
+    </div>
+    <div class="12u$">
+    <h3>Card info</h3>
+    </div>
+    <div class="12u">
+      <input name="cardnumber" placeholder="Card number" type="text"
+value="{{sub.card.number}}"/>
+    </div>
+    <div class="4u">
+      <input name="expiremonth" placeholder="Expire month" type="text" value="{{sub.card.expM}}"/>
+    </div>
+<div class="4u">
+      <input name="expireyear" placeholder="Expire year" type="text"
+value="{{sub.card.expY}}"/>
+    </div>
+    <div class="4u">
+      <input name="cvc" placeholder="CVC" type="text" value="{{sub.card.cvc}}"/>
+    </div>
+    <div class="12u$">
+      <h3>Subscription</h3>
+    </div>
+    <div class="12u">
+      <select ng-model="sub.selectedPlanId">
+        <option value="tplanOne">God save the queen</option>
+        <option value="tplanTwo">From kentucky with love</option>
+        <option value="tplanThree">The rum diary</option>
+      </select>
+    </div>
+    <div class="12u$">
+      <h3>Delivery details</h3>
+    </div>
+    <div class="12u">
+      <input name="address" placeholder="Address" type="text" ng-model="sub.address.address" />
+    </div>
+    <div class="6u">
+  <input name="city" placeholder="City" type="text" ng-model="sub.address.city"/>
+    </div>
+    <div class="6u">
+      <input name="zipcode" placeholder="Post Code" type="text" ng-model="sub.address.zipcode"/>
+    </div>
+    <div class="12u$" style="text-align:left">
+      <input name="defaultadress" type="checkbox" ng-model="sub.saveAddress">
+      <label ng-click="sub.saveAddress = !sub.saveAddress">Save as default address</label>
+    </div>                                                </div>
+</div>
+
+<ul class="actions">
+ <li><input type="submit" class="special" value="Confirm subscription" ng-click="sub.subscribe($event)"/></li>
+</ul>
+</form>
+</div>
+</section>

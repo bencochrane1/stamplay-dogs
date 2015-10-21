@@ -1,0 +1,10 @@
+{
+  "appId": "doggydelight",
+  "apiKey": "535ffb1c6c5d0c398a0f68484a991b30991f778f4153a033914230a596f3764c",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
